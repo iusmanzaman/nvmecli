@@ -1,0 +1,12 @@
+1152,1153c1152
+< //	ctrl->ctrl_config |= (page_shift - 12) << NVME_CC_MPS_SHIFT;
+< 	ctrl->ctrl_config |= (NVME_CAP_MPSMAX(cap)+0x1) << NVME_CC_MPS_SHIFT;
+---
+> 	ctrl->ctrl_config |= (page_shift - 12) << NVME_CC_MPS_SHIFT;
+1159,1160c1158
+< 	if (ret) {
+< 		printk(KENR_INFO "nvme failure: reading csts %#x\n", readl(dev->bar + NVME_REG_CSTS));
+---
+> 	if (ret)
+1162d1159
+< 	}

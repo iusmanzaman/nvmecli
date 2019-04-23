@@ -1,0 +1,4 @@
+1158c1158
+< 	ctrl->ctrl_config |= NVME_CC_IOSQES | NVME_CC_IOCQES;
+---
+> 	ctrl->ctrl_config |= NVME_CC_IOSQES ;

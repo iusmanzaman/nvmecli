@@ -1,0 +1,13 @@
+1140a1141
+> 
+1152c1153
+< 	ctrl->ctrl_config |= (1 << 11) | NVME_CC_SHN_NONE;
+---
+> 	ctrl->ctrl_config |= NVME_CC_ARB_RR | NVME_CC_SHN_NONE;
+1157,1158c1158
+< 	if (ret) {
+< 		printk(KERN_INFO "nvme: reading csts: %#x\n", readl(dev->bar + NVME_REG_CSTS));
+---
+> 	if (ret)
+1160d1159
+< 	}

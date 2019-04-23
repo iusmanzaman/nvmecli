@@ -1,0 +1,13 @@
+1247c1247,1248
+< 	writel(aqa, dev->bar + NVME_REG_AQA);
+---
+> 	writel(0, dev->bar + NVME_REG_AQA);
+> 
+1250a1252
+>         printk(KERN_INFO "nvme: reading CSTS %#x\n", readl(dev->bar + NVME_REG_CSTS));
+1251a1254
+>         printk(KERN_INFO "nvme: reading CSTS %#x\n", readl(dev->bar + NVME_REG_CSTS));
+1752c1755
+< 
+---
+> 	printk(KERN_INFO "nvme: reading controller status %x\n", readl(dev->bar + NVME_REG_CSTS));

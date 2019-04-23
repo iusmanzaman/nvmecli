@@ -1,0 +1,11 @@
+1248,1249c1248,1249
+< 	lo_hi_writeq((nvmeq->sq_dma_addr) + 1, dev->bar + NVME_REG_ASQ);
+< 	lo_hi_writeq((nvmeq->cq_dma_addr) + 1, dev->bar + NVME_REG_ACQ);
+---
+> 	lo_hi_writeq(nvmeq->sq_dma_addr, dev->bar + NVME_REG_ASQ);
+> 	lo_hi_writeq(nvmeq->cq_dma_addr, dev->bar + NVME_REG_ACQ);
+1252,1253c1252
+< 	printk(KERN_INFO "nvme: allocating not alligned addresses nvmeq->sq_dma_addr: %lx , nvmeq->cq_dma_addr : %lx, csts = %#x\n",
+< 		nvmeq->sq_dma_addr, nvmeq->cq_dma_addr, readl(dev->bar +  NVME_REG_CSTS));
+---
+> 	

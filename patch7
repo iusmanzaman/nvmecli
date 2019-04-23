@@ -1,0 +1,6 @@
+1253,1257d1252
+< 	printk(KERN_INFO "CC reg value after enabling controller: %x", readl(dev->bar + NVME_REG_CC));
+< 	ctrl->ctrl_config |= (2) << NVME_CC_MPS_SHIFT;
+< 	ctrl->ops->reg_write32(ctrl, NVME_REG_CC, ctrl->ctrl_config);
+< 	printk(KERN_INFO "CC reg value after changing bits in it: %x", readl(dev->bar + NVME_REG_CC));
+< 	

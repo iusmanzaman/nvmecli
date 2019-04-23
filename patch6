@@ -1,0 +1,8 @@
+1248,1254d1247
+< 	printk(KERN_INFO "old cap %#llx\n", cap);
+< 	lo_hi_writeq(0b1111, dev->bar + NVME_REG_CAP);
+< 	if (	lo_hi_readq(dev->bar + NVME_REG_CAP) == cap)
+< 		printk(KERN_INFO "nvme: no effect of writing on RO registers\n");
+< 	else	printk(KERN_INFO "nvme failure: readonly registers were written,, new cap: %#llx\n", 
+< 			 lo_hi_readq(dev->bar + NVME_REG_CAP)); 
+< 

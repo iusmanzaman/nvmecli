@@ -1,0 +1,11 @@
+1151c1151
+< 	ctrl->ctrl_config = (1 << 4);
+---
+> 	ctrl->ctrl_config = NVME_CC_CSS_NVM;
+1158,1159c1158
+< 	if (ret) {
+< 		printk(KERN_INFO "nvme failure: reading status register: %#x\n", readl(dev->bar + NVME_REG_CSTS));
+---
+> 	if (ret)
+1161d1159
+< 	}
